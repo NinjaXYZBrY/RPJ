@@ -1,7 +1,6 @@
 <html><head><base href=".">
   <title>RPG Online - Adventure</title>
   <style>
-
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -9,19 +8,16 @@
       background: #1a1a2e;
       color: #fff;
     }
-
     .container {
       max-width: 800px;
       margin: 0 auto;
     }
-
     .login-form, .game-ui, .admin-panel {
       background: #16213e;
       padding: 20px;
       border-radius: 8px;
       margin: 10px 0;
     }
-
     .character {
       display: flex;
       gap: 20px;
@@ -31,11 +27,9 @@
       border-radius: 8px;
       margin: 10px 0;
     }
-
     .stats {
       flex: 1;
     }
-
     button {
       background: #e94560;
       color: white;
@@ -46,22 +40,18 @@
       transition: 0.3s;
       margin: 5px;
     }
-
     button:hover {
       background: #ff2e63;
     }
-
     input, select {
       padding: 8px;
       margin: 5px;
       border-radius: 4px;
       border: 1px solid #333;
     }
-
     .hidden {
       display: none;
     }
-
     .enemy {
       display: flex;
       justify-content: space-between;
@@ -71,13 +61,11 @@
       margin: 5px 0;
       border-radius: 4px;
     }
-
     .edit-enemy-btn {
       background: #4A90E2;
       padding: 5px 10px;
       font-size: 12px;
     }
-
     .battle-log {
       background: #0a192f;
       padding: 10px;
@@ -85,36 +73,30 @@
       overflow-y: auto;
       margin: 10px 0;
     }
-
     .attacks {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       margin: 10px 0;
     }
-
     .attacks button {
       background: #4A90E2;
     }
-
     .attacks button:disabled {
       background: #666;
       cursor: not-allowed;
     }
-
     .inventory-container {
       display: flex;
       gap: 20px;
       margin: 10px 0;
     }
-
     .inventory, .equipped {
       flex: 1;
       background: #16213e;
       padding: 15px;
       border-radius: 8px;
     }
-
     .item, .equipped-item {
       display: flex;
       justify-content: space-between;
@@ -124,13 +106,11 @@
       background: #1a1a2e;
       border-radius: 4px;
     }
-
     .item button, .equipped-item button {
       padding: 5px 10px;
       font-size: 12px;
       margin-left: 5px;
     }
-
     /* Add element-specific colors */
     .element-water { color: #4FC3F7; }
     .element-fire { color: #FF5722; }
@@ -141,13 +121,11 @@
     .element-space { color: #3F51B5; }
     .element-ice { color: #B3E5FC; }
     .element-earth { color: #795548; }
-
     /* Add item class styles */
     .class-warrior { color: #ff4d4d; }  
     .class-mage { color: #4d4dff; }
     .class-archer { color: #9966ff; }
     .class-any { color: #cccccc; }
-
     .enemy-drop {
       margin: 10px 0;
       padding: 5px;
@@ -157,25 +135,21 @@
       gap: 10px;
       align-items: center;
     }
-
     .enemy-drop select, 
     .enemy-drop input {
       padding: 5px;
       border-radius: 4px;
     }
-
     .enemy-drop button {
       padding: 5px 10px;
       font-size: 12px;
     }
-
     .modes {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       margin: 10px 0;
     }
-
     .modes button {
       background: #4A90E2;
       flex: 1;
@@ -183,23 +157,19 @@
       text-align: center;
       padding: 10px;
     }
-
     .modes button.active {
       background: #2ECC71;
     }
-
     .modes button:disabled {
       background: #666;
       cursor: not-allowed;
     }
-
     .crafting {
       background: #16213e;
       padding: 15px;
       border-radius: 8px;
       margin: 10px 0;
     }
-
     .recipe {
       background: #1a1a2e;
       padding: 10px;
@@ -209,47 +179,39 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .recipe-materials {
       font-size: 0.9em;
       color: #aaa;
       margin-top: 5px;
     }
-
     .recipe button {
       background: #4A90E2;
       padding: 5px 10px;
       font-size: 12px;
     }
-
     .recipe button:disabled {
       background: #666;
       cursor: not-allowed;
     }
-
     .recipe-material {
       display: flex;
       gap: 10px;
       margin: 5px 0;
       align-items: center;
     }
-
     .recipe-material select,
     .recipe-material input {
       padding: 5px;
       border-radius: 4px;
     }
-
     .recipe-material button {
       padding: 5px 10px;
       font-size: 12px;
     }
-
     .item span {
       font-size: 1em;
       color: #fff;
     }
-
     /* New styles */
     .inventory-page {
       display: none;
@@ -263,11 +225,9 @@
       bottom: 0;
       z-index: 100;
     }
-
     .inventory-page.active {
       display: block;
     }
-
     .back-button {
       background: #4A90E2;
       color: white;
@@ -277,7 +237,6 @@
       margin-bottom: 20px;
       cursor: pointer;
     }
-
     /* Add styles for explore page */
     .explore-page {
       display: none;
@@ -291,18 +250,15 @@
       bottom: 0;
       z-index: 100;
     }
-
     .explore-page.active {
       display: block;
     }
-
     .location-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
-
     .location-card {
       background: #1a1a2e;
       padding: 15px;
@@ -310,22 +266,18 @@
       cursor: pointer;
       transition: 0.3s;
     }
-
     .location-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-
     .location-card h3 {
       margin-top: 0;
     }
-
     .location-card p {
       margin: 5px 0;
       font-size: 0.9em;
       color: #aaa;
     }
-    
     .guild-chat {
       background: #16213e;
       padding: 20px;
@@ -333,11 +285,9 @@
       margin-top: 20px;
       display: none;
     }
-
     .guild-chat.visible {
       display: block;
     }
-
     .chat-messages {
       height: 300px;
       overflow-y: auto;
@@ -346,12 +296,10 @@
       border-radius: 4px;
       margin-bottom: 10px;
     }
-
     .chat-input {
       display: flex;
       gap: 10px;
     }
-
     .chat-input input {
       flex: 1;
       padding: 10px;
@@ -360,14 +308,12 @@
       background: #1a1a2e;
       color: white;
     }
-
     .chat-message {
       margin: 5px 0;
       padding: 5px;
       border-radius: 4px;
       background: #0f3460;
     }
-
     .forest-page {
       display: none;
       background: #16213e;
@@ -380,7 +326,6 @@
       bottom: 0;
       z-index: 100;
     }
-
     .forest-page.active {
       display: block;
     }
@@ -389,7 +334,6 @@
 <body>
   <div class="container">
     <h1>RPG Online Adventure</h1>
-
     <!-- Login Form -->
     <div id="loginForm" class="login-form">
       <h2>Login</h2>
@@ -398,7 +342,6 @@
       <button onclick="login()">Login</button>
       <button onclick="showRegister()">Register</button>
     </div>
-
     <!-- Register Form -->
     <div id="registerForm" class="login-form hidden">
       <h2>Register</h2>
@@ -412,7 +355,6 @@
       <button onclick="register()">Create Character</button>
       <button onclick="returnToMenu()">Return to Menu</button>
     </div>
-
     <!-- Game UI -->
     <div id="gameUI" class="game-ui hidden">
       <div class="character">
@@ -427,22 +369,17 @@
           <p>Wave: <span id="currentWave">1</span></p>
         </div>
       </div>
-
       <div class="actions">
         <button onclick="explore()">Explore</button>
         <button onclick="heal()">Heal (10 gold)</button>
         <button onclick="showInventoryPage()">Inventory</button>
         <button onclick="returnToMenu()">Return to Menu</button>
       </div>
-
       <div class="attacks" id="attackButtons">
       </div>
-
       <div class="battle-log" id="battleLog"></div>
-
       <div class="modes"></div>
     </div>
-
     <!-- Inventory Page -->
     <div id="inventoryPage" class="inventory-page">
       <button class="back-button" onclick="hideInventoryPage()">Back to Game</button>
@@ -459,7 +396,6 @@
         <div id="craftingRecipes"></div>
       </div>
     </div>
-
     <!-- Explore Page -->
     <div id="explorePage" class="explore-page">
       <button class="back-button" onclick="hideExplorePage()">Back to Game</button>
@@ -484,7 +420,6 @@
         </div>
       </div>
     </div>
-
     <!-- Forest Page -->
     <div id="forestPage" class="forest-page">
       <button class="back-button" onclick="hideForestPage()">Back to Locations</button>
@@ -511,7 +446,6 @@
       <div id="forestBattleLog" class="battle-log"></div>
       <div id="forestModes" class="modes"></div>
     </div>
-
     <!-- Admin Panel -->
     <div id="adminPanel" class="admin-panel hidden">
       <h2>Admin Panel</h2>
@@ -543,7 +477,6 @@
         <button onclick="createEnemy()">Create Enemy</button>
         <button onclick="returnToMenu()">Return to Menu</button>
       </div>
-
       <div id="enemyList">
         <h3>Enemy List</h3>
         <div id="enemyItemTemplate">
@@ -563,7 +496,6 @@
         </div>
         <!-- Add more enemies as needed -->
       </div>
-
       <div>
         <h3>Create Attack</h3>
         <input type="text" id="attackName" placeholder="Attack Name">
@@ -603,12 +535,10 @@
         </select>
         <button onclick="createAttack()">Create Attack</button>
       </div>
-
       <div id="attackList">
         <h3>Attack List</h3>
         <!-- Attacks will be listed here -->
       </div>
-
       <!-- Add to admin panel -->
       <div>
         <h3>Create Mode</h3>
@@ -646,12 +576,10 @@
         </select>
         <button onclick="createMode()">Create Mode</button>
       </div>
-
       <div id="modeList">
         <h3>Mode List</h3>
         <!-- Modes will be listed here -->
       </div>
-
       <div>
         <h3>Create/Edit Item</h3>
         <input type="text" id="itemName" placeholder="Item Name">
@@ -672,12 +600,10 @@
         <input type="number" id="itemMinLevel" placeholder="Minimum Level">
         <button onclick="createItem()">Create Item</button>
       </div>
-
       <div id="itemList">
         <h3>Item List</h3>
         <!-- Items will be listed here -->
       </div>
-
       <div>
         <h3>Create/Edit Crafting Recipe</h3>
         <input type="text" id="recipeName" placeholder="Recipe Name">
