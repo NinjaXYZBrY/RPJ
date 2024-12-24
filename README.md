@@ -1,7 +1,7 @@
 <html><head><base href=".">
   <title>RPG Online - Adventure</title>
   <style>
-    /* Previous styles remain unchanged */
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
